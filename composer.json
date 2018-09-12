@@ -1,7 +1,7 @@
 {
     "name": "artemeon/officegen",
     "type": "library",
-    "description": "Gateway to",
+    "description": "Bridge to generate reports through an external library",
     "keywords": ["office", "powerpoint", "excel", "word", "generation"],
     "homepage": "https://github.com/artemeon/officegen",
     "license": "MIT",
