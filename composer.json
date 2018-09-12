@@ -1,0 +1,25 @@
+{
+    "name": "artemeon/officegen",
+    "type": "library",
+    "description": "Gateway to",
+    "keywords": ["office", "powerpoint", "excel", "word", "generation"],
+    "homepage": "https://github.com/artemeon/officegen",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+        "symfony/process": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Artemeon\\Officegen\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Artemeon\\Officegen\\Tests\\": "tests"
+        }
+    }
+}
