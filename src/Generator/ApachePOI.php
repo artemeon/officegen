@@ -7,6 +7,7 @@
 namespace Artemeon\Officegen\Generator;
 
 use Artemeon\Officegen\GeneratorInterface;
+use Artemeon\Officegen\ReportNotFoundException;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 
@@ -51,7 +52,11 @@ class ApachePOI implements GeneratorInterface
         $process->run();
 
         if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
+            if ($process->getExitCode() === 4) {
+                throw new ReportNotFoundException("Report " . $reportId . " does not exist");
+            } else {
+                throw new ProcessFailedException($process);
+            }
         }
     }
 }

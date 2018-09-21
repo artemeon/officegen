@@ -20,6 +20,7 @@ interface GeneratorInterface
      * @param string $outFile
      * @param mixed|null $data
      * @return void
+     * @throws ReportNotFoundException
      */
     public function generate(string $reportId, string $outFile, $data = null);
 }

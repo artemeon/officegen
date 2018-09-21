@@ -22,6 +22,8 @@ interface ProcessorInterface
      * @param string $outFile
      * @param mixed|null $data
      * @return void
+     * @throws ProcessingFailedException
+     * @throws ReportNotFoundException
      */
     public function execute(string $reportId, string $outFile, $data = null);
 }

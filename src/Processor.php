@@ -11,7 +11,7 @@ namespace Artemeon\Officegen;
  *
  * @author christoph.kappestein@artemeon.de
  */
-class Processor
+class Processor implements ProcessorInterface
 {
     /**
      * @var GeneratorInterface
